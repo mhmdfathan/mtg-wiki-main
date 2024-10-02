@@ -1,89 +1,91 @@
-/* src/components/Detail.css */
+.detail-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
 
-.detail-booster-page {
-    text-align: center;
-    min-height: 100vh;
-    display: flex;
+.detail-container {
+  display: flex;
+  gap: 40px;
+}
+
+.detail-card-image img {
+  max-width: 100%;
+  border-radius: 4.75% / 3.5%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.detail-card-info {
+  flex-grow: 1;
+}
+
+h1 {
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.card-type {
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  margin-bottom: 20px;
+}
+
+.flavor-text {
+  font-style: italic;
+  color: #666;
+}
+
+.card-stats,
+.set-info {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.legalities h3,
+.pricing h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.legality-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.legality-grid span {
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.legal {
+  background-color: #e9ffef;
+  color: #1c7c4e;
+}
+
+.not-legal {
+  background-color: #ffeaea;
+  color: #7c1c1c;
+}
+
+.pricing ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.pricing li {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .detail-container {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f4f4f4; /* Light gray background */
-    background-image: url('https://wallpapercave.com/wp/wp2805744.jpg'); /* Add your background image URL */
-    background-size: cover;
-    background-position: center;
   }
-  
-  .detail-card-container-wrapper {
-    margin: 2vw auto;
-    max-width: 80vw;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2vw;
-    justify-content: center;
-    align-items: stretch;
-  }
-  
-  .detail-card-item {
-    margin: 2vw;
-    padding: 2vw;
-    border: 1px solid #ddd;
-    border-radius: 2vw;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff; /* White background */
-    transition: transform 0.3s ease-in-out, background-color 0.2s ease-in-out;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .detail-card-item:hover {
-    background-color: #e6f7ff; /* Light blue background on hover */
-    transform: scale(1.02);
-  }
-  
-  .detail-card-item a {
-    display: block;
-    height: 80%;
-    width: 100%;
-  }
-  
-  .detail-card-image-container {
-    margin-top: 1vw; /* Adjust margin as needed */
-  }
-  
-  .detail-card-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  
-  .detail-card-description {
-    padding: 1vw;
-  }
-  
-  .detail-card-title {
-    font-size: 2vw;
-    margin: 1vw 0;
-    text-align: center;
-    flex: 1;
-    color: #333; /* Dark gray text color */
-  }
-  
-  @media screen and (max-width: 768px) {
-    .detail-booster-page {
-      padding: 0;
-    }
-  
-    .detail-card-item {
-      width: 90%;
-    }
-  
-    .detail-card-item img {
-      height: 120px;
-    }
-  
-    .detail-card-title {
-      font-size: 2.5vw;
-      margin: 1.5vw 0;
-    }
-  }
-  
+}
