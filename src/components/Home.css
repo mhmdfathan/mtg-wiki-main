@@ -1,0 +1,62 @@
+/* src/components/Home.css */
+
+.home-card-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vw;
+  }
+  
+  .home-card-item {
+    margin: 0;
+    padding: 1vw;
+    border: 1px solid #ddd;
+    border-radius: 2vw;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 0 calc(33% - 2vw);
+    max-height: calc(50vh - 2vw);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    max-height: 100vh;
+  }
+  
+  .home-card-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .home-card-link:hover {
+    color: #61dafb;
+  }
+  
+  /* New styles for the card container */
+  .home-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  /* Change the background color on hover */
+  .home-card-container:hover {
+    background-color: #f0f0f0; /* Change to the desired background color */
+  }
+  
+  /* Styles for the card image */
+  .home-card-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+  

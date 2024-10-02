@@ -1,0 +1,45 @@
+/* src/components/BoosterPage.css */
+
+.booster-page {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    padding: 20px;
+    background-image: url('https://images6.alphacoders.com/131/1315876.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .booster-card-container-wrapper {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+  .booster-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vw;
+  }
+  
+  .booster-card-item {
+    margin: 0;
+    padding: 1vw;
+    border: 1px solid #ddd;
+    border-radius: 2vw;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 0 calc(33% - 2vw);
+    max-height: calc(50vh - 2vw);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out, background-color 0.2s ease-in-out;
+    max-height: 100vh;
+  }
+  
+  .booster-card-item:hover {
+    background-color: #dcdcdc;
+  }
+  
