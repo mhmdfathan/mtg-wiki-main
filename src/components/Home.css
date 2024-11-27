@@ -4,18 +4,18 @@
     list-style: none;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1vw;
-  }
-  
-  .home-card-item {
+    grid-template-columns: repeat(4, 1fr); /* Increase the number of columns */
+    gap: 0.5vw; /* Reduce the gap between columns */
+}
+
+.home-card-item {
     margin: 0;
-    padding: 1vw;
+    padding: 0.5vw; /* Reduce the padding */
     border: 1px solid #ddd;
-    border-radius: 2vw;
+    border-radius: 1vw; /* Reduce the border radius */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 1 0 calc(33% - 2vw);
-    max-height: calc(50vh - 2vw);
+    flex: 1 0 calc(25% - 1vw); /* Adjust the flex basis to fit 4 columns */
+    max-height: calc(50vh - 1vw);
     overflow: hidden;
     position: relative;
     display: flex;
@@ -24,20 +24,20 @@
     background-color: #fff;
     transition: transform 0.3s ease-in-out;
     max-height: 100vh;
-  }
-  
-  .home-card-link {
+}
+
+.home-card-link {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-  }
-  
-  .home-card-link:hover {
+}
+
+.home-card-link:hover {
     color: #61dafb;
-  }
-  
-  /* New styles for the card container */
-  .home-card-container {
+}
+
+/* New styles for the card container */
+.home-card-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,18 +45,17 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     transition: background-color 0.2s ease-in-out;
-  }
-  
-  /* Change the background color on hover */
-  .home-card-container:hover {
+}
+
+/* Change the background color on hover */
+.home-card-container:hover {
     background-color: #f0f0f0; /* Change to the desired background color */
-  }
-  
-  /* Styles for the card image */
-  .home-card-image {
+}
+
+/* Styles for the card image */
+.home-card-image {
     max-width: 100%;
     height: auto;
     margin-top: 10px;
     border-radius: 8px;
-  }
-  
+}

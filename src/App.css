@@ -1,83 +1,169 @@
 /* app.css */
 .App {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .content {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
 .bottom-nav {
-  background-color: #282c34;
-  color: white;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly; /* Space out items evenly */
+    background-color: #282c34;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly; /* Space out items evenly */
 }
 
 .bottom-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 .bottom-nav li {
-  margin: 0;
+    margin: 0;
 }
 
 .bottom-nav a {
-  text-decoration: none;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 5px; /* Add margin for spacing */
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px; /* Add margin for spacing */
 }
 
 /* Add FontAwesome icons */
 .bottom-nav i {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 /* Your existing styles below */
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* src/index.css */
+
+/* Common styles for card lists */
+.card-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Increase the number of columns */
+    gap: 0.5vw; /* Reduce the gap between columns */
+}
+
+/* Common styles for card items */
+.card-item {
+    margin: 0;
+    padding: 0.5vw; /* Reduce the padding */
+    border: 1px solid #ddd;
+    border-radius: 1vw; /* Reduce the border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 0 calc(25% - 1vw); /* Adjust the flex basis to fit 4 columns */
+    max-height: calc(50vh - 1vw);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out, background-color 0.2s ease-in-out;
+    max-height: 100vh;
+}
+
+.card-item:hover {
+    background-color: #dcdcdc;
+}
+
+/* Common styles for card links */
+.card-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Common styles for card containers */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.card-container:hover {
+    background-color: #f0f0f0; /* Change to the desired background color */
+}
+
+/* Common styles for card images */
+.card-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+/* src/components/Home.css */
+
+.home-card-list {
+    @apply card-list;
+}
+
+.home-card-item {
+    @apply card-item;
+}
+
+.home-card-link {
+    @apply card-link;
+}
+
+.home-card-container {
+    @apply card-container;
+}
+
+.home-card-image {
+    @apply card-image;
 }
